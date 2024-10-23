@@ -1,0 +1,166 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static "styles.css" %}">
+</head>
+<body>
+    {% if ErrFlag  %}
+        <span style="color:#ff0f0f;"><h3><b>{{ErrVal.main}}</b></h3></span>
+        <Br>
+        <span style="color:#ff0f0f;"><h3><b>{{ErrVal.Fcast}}</b></h3></span>
+    {% endif %}
+    {% for wdata in weatherdata %} 
+<div class="container" id="wrapper">
+    {% if wdata.Alert  %}
+        <marquee><span style="color:#ff0f0f;"><h4><b>{{wdata.condition}} Alert! in {{wdata.location}}</b></h4></span></marquee>
+    {% endif %}
+    <div class="container-fluid" id="current-weather">
+        <div class="row">
+
+            <!-- Right panel -->
+            <div class="col-md-4 col-sm-5">
+                <h5><span id="cityName"></span>{{wdata.location}}<span id="cityCode"></span></h5>
+                <h6 id="localDate">{{wdata.date}}</h6>
+                <h5 id="localTime">{{wdata.time}}</h5>
+                <!--<a id="refreshButton" href="#"><i class="fa fa-refresh fa-fw" aria-hidden="true"></i> Refresh</a>-->
+            </div>
+
+            <!-- Center panel -->
+            <div class="col-md-5 col-sm-7" style="margin: 10px auto; padding: 0;">
+                <div class="row">
+                    <i class="wi {{wdata.icon}}" id="main-icon" style="font-size: 85px;"></i><br>
+                    <div>
+                        <span id="mainTemperature"> {{wdata.temp}}°C</span>
+                        <p id="tempDescription">{{wdata.condition_des}}</p>
+                    </div>
+                    <p style="font-size: 1.5rem;">
+                        
+                    </p>
+                </div>
+            </div>
+
+            <!-- Left panel -->
+            <div class="col-xs-12 col-sm-12 col-md-3 row" style="text-align: right;">
+                <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
+                    <h6>Humidity: <span id="humidity">
+                         </span>{{wdata.humidity}}%</h6>
+                </div>
+                <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
+                    <h6>Wind: <span id="wind"></span>{{wdata.wind}}Km/s</h6>
+                </div>
+                <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
+                    <h6>High: <span id="mainTempHot"></span>{{wdata.max_temp}}C°</h6>
+                </div>
+                <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
+                    <h6>Low: <span id="mainTempLow"></span>{{wdata.min_temp}}C°</h6>
+                </div>
+                <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
+                    <h6>feels like: <span id="mvis"></span>{{wdata.feels_like}}C°</h6>
+                </div>
+                <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
+                    <h6>visibility: <span id="ling"></span>{{wdata.visibility}}C°</h6>
+                </div>
+            </div>
+
+        </div>
+    </div>
+ 
+    <!-- 4 days forecast -->
+    <div class="container-fluid">
+        <div class="row" style="padding: 2px;">
+            <!-- Day 1 -->
+            <div class="col-md-3 col-sm-6 day-weather-box">
+                <div class="col-sm-12 day-weather-inner-box">
+                    <div class="col-sm-8 forecast-main">
+                        <p id="forecast-day-1-name">{{wdata.foredata.0.day_name}}</p>
+                        <div class="row">
+                            <h5 id="forecast-day-1-main">{{wdata.foredata.0.avg}}°C</h5>
+                            <i class="wi forecast-icon {{wdata.foredata.0.icon}}" id="forecast-day-1-icon"></i>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 forecast-min-low">
+                        <p><span class="high-temperature" id="forecast-day-1-ht">{{wdata.foredata.0.max}}°C</span></p>
+                        <p><span class="low-temperature" id="forecast-day-1-lt">{{wdata.foredata.0.min}}°C</span></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat similar blocks for Days 2, 3, and 4 -->
+            <!-- Day 2 -->
+            <div class="col-md-3 col-sm-6 day-weather-box">
+                <div class="col-sm-12 day-weather-inner-box">
+                    <div class="col-sm-8 forecast-main">
+                        <p id="forecast-day-2-name">{{wdata.foredata.1.day_name}}</p>
+                        <div class="row">
+                            <h5 id="forecast-day-2-main">{{wdata.foredata.1.avg}}°C</h5>
+                            <i class="wi forecast-icon {{wdata.foredata.1.icon}}" id="forecast-day-2-icon"></i>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 forecast-min-low">
+                        <p><span class="high-temperature" id="forecast-day-2-ht">{{wdata.foredata.1.max}}°C</span></p>
+                        <p><span class="low-temperature" id="forecast-day-2-lt">{{wdata.foredata.1.min}}°C</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="col-md-3 col-sm-6 day-weather-box">
+                <div class="col-sm-12 day-weather-inner-box">
+                    <div class="col-sm-8 forecast-main">
+                        <p id="forecast-day-3-name">{{wdata.foredata.2.day_name}}</p>
+                        <div class="row">
+                            <h5 id="forecast-day-3-main">{{wdata.foredata.2.avg}}°C</h5>
+                            <i class="wi forecast-icon {{wdata.foredata.2.icon}}" id="forecast-day-3-icon"></i>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 forecast-min-low">
+                        <p><span class="high-temperature" id="forecast-day-3-ht">{{wdata.foredata.2.max}}°C</span></p>
+                        <p><span class="low-temperature" id="forecast-day-3-lt">{{wdata.foredata.1.min}}°C</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 4 -->
+            <div class="col-md-3 col-sm-6 day-weather-box">
+                <div class="col-sm-12 day-weather-inner-box">
+                    <div class="col-sm-8 forecast-main">
+                        <p id="forecast-day-4-name">{{wdata.foredata.3.day_name}}</p>
+                        <div class="row">
+                            <h5 id="forecast-day-4-main">{{wdata.foredata.3.avg}}°C</h5>
+                            <i class="wi forecast-icon {{wdata.foredata.3.icon}}" id="forecast-day-4-icon"></i>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 forecast-min-low">
+                        <p><span class="high-temperature" id="forecast-day-4-ht">{{wdata.foredata.2.max}}°C</span></p>
+                        <p><span class="low-temperature" id="forecast-day-4-lt">{{wdata.foredata.2.min}}°C</span></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>ss
+    </div>
+</div>
+<!--<script>
+    {% if wdata.Alert  %}
+        alert("{{wdata.condition}} Alert! in {{wdata.location}}");
+    {% endif %}
+</script>-->
+{% endfor %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="">
+    function refreshPage() {
+  location.reload();
+}
+
+setInterval(refreshPage, 60000);
+</script>
+</body>
+</html>
