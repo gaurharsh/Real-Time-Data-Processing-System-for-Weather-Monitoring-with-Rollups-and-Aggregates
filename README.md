@@ -1,19 +1,19 @@
 # Real-Time-Data-Processing-System-for-Weather-Monitoring-with-Rollups-and-Aggregates
-This project is a real-time weather monitoring dashboard built with Django. It fetches weather data from the OpenWeatherMap API and provides users with up-to-date weather information and a 4-day forecast for multiple cities. The data includes temperature, humidity, wind speed, and weather alerts, with a dynamic user interface displaying the conditions.
+This project is a real-time weather monitoring dashboard built with Django. It fetches weather data from the OpenWeatherMap API and provides users with up-to-date<br> weather information and a 4-day forecast for multiple cities. The data includes temperature, humidity, wind speed, and weather alerts, with a dynamic user <br>interface displaying the conditions.<br>
 
 Features
-Real-time weather data fetching for multiple cities.
-4-day weather forecast.
-Detailed current weather information: temperature, humidity, wind speed, visibility, etc.
-Alerts for extreme weather conditions (e.g., rain, thunderstorms).
-Data storage in a SQLite database for further analysis.
-Responsive design using Bootstrap and Weather Icons.
-
-
-Prerequisites
-Python 3.8+
-Django 5.1.2
-API Key from OpenWeatherMap (Get one here)<be>
+Real-time weather data fetching for multiple cities.<br>
+4-day weather forecast.<br>
+Detailed current weather information: temperature, humidity, wind speed, visibility, etc.<br>
+Alerts for extreme weather conditions (e.g., rain, thunderstorms).<br>
+Data storage in a SQLite database for further analysis.<br>
+Responsive design using Bootstrap and Weather Icons.<br>
+<br>
+<br>
+Prerequisites<br>
+Python 3.8+<br>
+Django 5.1.2<br>
+API Key from OpenWeatherMap (Get one here)<br>
 ### The steps that need to be taken to execute this project on localhost
 #### Step 1: Clone the repository<br>
 		` ` ` cmd
@@ -66,25 +66,28 @@ API Key from OpenWeatherMap (Get one here)<be>
 └── manage.py                  # Django management script<br>
 
 Key Files
-1. views.py: Contains the logic to fetch data from the OpenWeatherMap API and pass it to the frontend.
-2. models.py: Defines the WeatherData model for saving weather data into the SQLite database.
-3. index.html: The main template that renders weather information dynamically using Django’s templating engine.
+1. views.py: Contains the logic to fetch data from the OpenWeatherMap API and pass it to the frontend.<br>
+2. models.py: Defines the WeatherData model for saving weather data into the SQLite database.<br>
+3. index.html: The main template that renders weather information dynamically using Django’s templating engine.<br>
 
 Customization
-Add more cities: In views.py, modify the cities list to include the cities you want to monitor.
-Modify forecast duration: Update the OpenWeatherMap API request in the get_forecast() function to extend or shorten the forecast period.
+Add more cities: In views.py, modify the cities list to include the cities you want to monitor.<br>
+Modify forecast duration: Update the OpenWeatherMap API request in the get_forecast() function to extend or shorten the forecast period.<br>
 
-Static Files and Styling
-CSS is located in static/styles.css, and it includes references to external styles like FontAwesome and Weather Icons.
-Bootstrap is used for responsive layout design.
+Static Files and Styling<br>
+CSS is located in static/styles.css, and it includes references to external styles like FontAwesome and Weather Icons.<br>
+Bootstrap is used for responsive layout design.<br>
 
-Future Improvements
-Add user authentication for personalized weather dashboards.
-Enable users to select and save their preferred cities.
-Implement weather alert notifications for severe weather conditions.
+Future Improvements<br>
+Add user authentication for personalized weather dashboards.<br>
+Enable users to select and save their preferred cities.<br>
+Implement weather alert notifications for severe weather conditions.<br>
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+License<br>
+This project is licensed under the MIT License. See the LICENSE file for details.<br>
 
-Author
-Harshvardhan
+Author<br>
+Harshvardhan<br>
+## Screenshots
+![ss1](/screenshots/Screenshot_1.png)<br>
+![ss1](/screenshots/Screenshot_1.png)
