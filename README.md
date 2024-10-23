@@ -13,23 +13,36 @@ Responsive design using Bootstrap and Weather Icons.
 Prerequisites
 Python 3.8+
 Django 5.1.2
-API Key from OpenWeatherMap (Get one here)
+API Key from OpenWeatherMap (Get one here)<be>
+### The steps that need to be taken to execute this project on localhost
+#### Step 1: Clone the repository<br>
+		```command
+			git clone https://github.com/gaurharsh/weather_monitor.git
+		```
 
-Installation
-1. Clone the repository:
-   git clone https://github.com/gaurharsh/weather_monitor.git
-cd weather_monitor
+#### Step 2: Create Virtual Environment By following command<br>
+		```command
+			python -m venv myweathermonitor
+		```
 
-2. Install required Python packages:
-    pip install -r requirements.txt
-3. Set up your OpenWeatherMap API key in the Django project:
-    Open views.py and update the api_key variable with your OpenWeatherMap API key.
-4. Run migrations to set up the SQLite database:
-    python manage.py migrate
-5. Run the development server:
-   python manage.py runserver
-
-6. Open your browser and visit: http://localhost:8000
+#### Step 3: Activate virtual environment<br>
+		
+		```command
+			myweathermonitor\Scripts\activate.bat
+		```
+		
+#### Step 4: Install requirements.txt<br>
+		
+		```command
+			pip install -r requirements. txt
+		```
+#### Step 5: locate manage.py and run<br>
+		
+		```command
+			cd weather_monitor
+			python manage.py runserver
+		```
+  #### Step 6: Open your browser and visit: http://localhost:8000<br>
 
    Project Structure:
    
