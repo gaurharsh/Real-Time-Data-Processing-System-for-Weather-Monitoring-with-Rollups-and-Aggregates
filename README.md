@@ -17,7 +17,7 @@ API Key from OpenWeatherMap (Get one here)
 
 Installation
 1. Clone the repository:
-   git clone https://github.com/yourusername/weather_monitor.git
+   git clone https://github.com/gaurharsh/weather_monitor.git
 cd weather_monitor
 
 2. Install required Python packages:
@@ -32,6 +32,7 @@ cd weather_monitor
 6. Open your browser and visit: http://localhost:8000
 
    Project Structure:
+   
    weather_monitor/
 │
 ├── weather_monitor/           # Django project settings and URLs
