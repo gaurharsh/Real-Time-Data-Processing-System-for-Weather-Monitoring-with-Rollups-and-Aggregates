@@ -16,29 +16,29 @@ Django 5.1.2
 API Key from OpenWeatherMap (Get one here)<be>
 ### The steps that need to be taken to execute this project on localhost
 #### Step 1: Clone the repository<br>
-		```
+		```console
 			git clone https://github.com/gaurharsh/weather_monitor.git
 		```
 
 #### Step 2: Create Virtual Environment By following command<br>
-		```c
+		```console
 			python -m venv myweathermonitor
 		```
 
 #### Step 3: Activate virtual environment<br>
 		
-		```
+		```console
 			myweathermonitor\Scripts\activate.bat
 		```
 		
 #### Step 4: Install requirements.txt<br>
 		
-		```
+		```console
 			pip install -r requirements. txt
 		```
 #### Step 5: locate manage.py and run<br>
 		
-		```
+		```console
 			cd weather_monitor
 			python manage.py runserver
 		```
