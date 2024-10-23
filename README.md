@@ -16,7 +16,7 @@ Django 5.1.2
 API Key from OpenWeatherMap (Get one here)<be>
 ### The steps that need to be taken to execute this project on localhost
 #### Step 1: Clone the repository<br>
-		```cmd
+		```Python
 			git clone https://github.com/gaurharsh/weather_monitor.git
 		```
 
