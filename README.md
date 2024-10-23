@@ -16,50 +16,54 @@ Django 5.1.2
 API Key from OpenWeatherMap (Get one here)<be>
 ### The steps that need to be taken to execute this project on localhost
 #### Step 1: Clone the repository<br>
-		```command
+		```
 			git clone https://github.com/gaurharsh/weather_monitor.git
 		```
 
 #### Step 2: Create Virtual Environment By following command<br>
-		```command
+		```c
 			python -m venv myweathermonitor
 		```
 
 #### Step 3: Activate virtual environment<br>
 		
-		```command
+		```
 			myweathermonitor\Scripts\activate.bat
 		```
 		
 #### Step 4: Install requirements.txt<br>
 		
-		```command
+		```
 			pip install -r requirements. txt
 		```
 #### Step 5: locate manage.py and run<br>
 		
-		```command
+		```
 			cd weather_monitor
 			python manage.py runserver
 		```
   #### Step 6: Open your browser and visit: http://localhost:8000<br>
 
-   Project Structure:
+   ###Project Structure:
    
-   weather_monitor/
+   weather_monitor/<br>
 │
-├── weather_monitor/           # Django project settings and URLs
-│   └── settings.py
-│
-├── weather_monitor_main/      # Main app handling weather monitoring
-│   ├── models.py              # Django models for storing weather data
-│   ├── views.py               # Main logic for fetching and displaying weather data
-│   ├── templates/             # HTML templates for rendering the UI
-│   ├── static/                # Static files (CSS, JavaScript, images)
-│   └── urls.py                # URL routes for the app
-│
-├── db.sqlite3                 # SQLite database
-└── manage.py                  # Django management script
+├── weather_monitor/           # Django project settings and URLs<br>
+│   └── settings.py<br>
+|   └── urls.py<br>
+|   └── wsgi.py<br>
+|   └── asgi.py<br>
+|   └── _ _init__.py.py<br>
+│<br>
+├── weather_monitor_main/      # Main app handling weather monitoring<br>
+│   ├── models.py              # Django models for storing weather data<br>
+│   ├── views.py               # Main logic for fetching and displaying weather data<br>              
+│   └── urls.py                # URL routes for the app<br>
+│<br>
+├──templates/                  # HTML templates for rendering the UI<br>
+├── static/                    # Static files (CSS, JavaScript, images)<br>
+├── db.sqlite3                 # SQLite database<br>
+└── manage.py                  # Django management script<br>
 
 Key Files
 1. views.py: Contains the logic to fetch data from the OpenWeatherMap API and pass it to the frontend.
@@ -81,3 +85,6 @@ Implement weather alert notifications for severe weather conditions.
 
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+Author
+Harshvardhan
