@@ -48,7 +48,7 @@ This project is a real-time weather monitoring dashboard built with Django. It f
 		```
   #### Step 6: Open your browser and visit: http://localhost:8000<br>
 
-   ###Project Structure:
+   ### Project Structure:
    
    weather_monitor/<br>
 │
@@ -69,29 +69,30 @@ This project is a real-time weather monitoring dashboard built with Django. It f
 ├── db.sqlite3                 # SQLite database<br>
 └── manage.py                  # Django management script<br>
 
-Key Files
-1. views.py: Contains the logic to fetch data from the OpenWeatherMap API and pass it to the frontend.<br>
-2. models.py: Defines the WeatherData model for saving weather data into the SQLite database.<br>
-3. index.html: The main template that renders weather information dynamically using Django’s templating engine.<br>
+## Key Files
+#### 1. views.py: Contains the logic to fetch data from the OpenWeatherMap API and pass it to the frontend.<br>
+#### 2. models.py: Defines the WeatherData model for saving weather data into the SQLite database.<br>
+#### 3. index.html: The main template that renders weather information dynamically using Django’s templating engine.<br>
 
-Customization
-Add more cities: In views.py, modify the cities list to include the cities you want to monitor.<br>
-Modify forecast duration: Update the OpenWeatherMap API request in the get_forecast() function to extend or shorten the forecast period.<br>
+## Customization
+#### Add more cities: In views.py, modify the cities list to include the cities you want to monitor.<br>
+#### Modify forecast duration: Update the OpenWeatherMap API request in the get_forecast() function to extend or shorten the forecast period.<br>
 
-Static Files and Styling<br>
-CSS is located in static/styles.css, and it includes references to external styles like FontAwesome and Weather Icons.<br>
-Bootstrap is used for responsive layout design.<br>
+## Static Files and Styling<br>
+#### CSS is located in static/styles.css, and it includes references to external styles like FontAwesome and Weather Icons.<br>
+#### Bootstrap is used for responsive layout design.<br>
 
-Future Improvements<br>
-Add user authentication for personalized weather dashboards.<br>
-Enable users to select and save their preferred cities.<br>
-Implement weather alert notifications for severe weather conditions.<br>
+## Future Improvements<br>
+#### Add user authentication for personalized weather dashboards.<br>
+#### Enable users to select and save their preferred cities.<br>
+#### Implement weather alert notifications for severe weather conditions.<br>
 
-License<br>
+## License<br>
 This project is licensed under the MIT License. See the LICENSE file for details.<br>
 
-Author<br>
+## Author<br>
 Harshvardhan<br>
+
 ## Screenshots
 ![ss1](/screenshots/Screenshot_1.png)<br>
 ![ss1](/screenshots/Screenshot_1.png)
