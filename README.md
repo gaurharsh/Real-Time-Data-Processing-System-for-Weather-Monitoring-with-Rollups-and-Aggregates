@@ -1,20 +1,24 @@
 # Real-Time-Data-Processing-System-for-Weather-Monitoring-with-Rollups-and-Aggregates
 This project is a real-time weather monitoring dashboard built with Django. It fetches weather data from the OpenWeatherMap API and provides users with up-to-date<br> weather information and a 4-day forecast for multiple cities. The data includes temperature, humidity, wind speed, and weather alerts, with a dynamic user <br>interface displaying the conditions.<br>
 
-Features
-Real-time weather data fetching for multiple cities.<br>
-4-day weather forecast.<br>
-Detailed current weather information: temperature, humidity, wind speed, visibility, etc.<br>
-Alerts for extreme weather conditions (e.g., rain, thunderstorms).<br>
-Data storage in a SQLite database for further analysis.<br>
-Responsive design using Bootstrap and Weather Icons.<br>
+## Features
+##### Real-time weather data fetching for multiple cities.<br>
+##### 4-day weather forecast.<br>
+##### Detailed current weather information: temperature, humidity, wind speed, visibility, etc.<br>
+##### Alerts for extreme weather conditions (e.g., rain, thunderstorms).<br>
+##### Data storage in a SQLite database for further analysis.<br>
+##### Responsive design using Bootstrap and Weather Icons.<br>
 <br>
 <br>
-Prerequisites<br>
-Python 3.8+<br>
-Django 5.1.2<br>
-API Key from OpenWeatherMap (Get one here)<br>
-### The steps that need to be taken to execute this project on localhost
+
+## Prerequisites<br>
+
+#### Python 3.8+<br>
+#### Django 5.1.2<br>
+#### API Key from OpenWeatherMap (Get one here)<br>
+
+### Setup Instructions
+
 #### Step 1: Clone the repository<br>
 		` ` ` cmd
 			git clone https://github.com/gaurharsh/weather_monitor.git
