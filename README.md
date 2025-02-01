@@ -4,7 +4,7 @@ This project is a real-time weather monitoring dashboard built with Django. It f
 ## Features
 ##### Real-time weather data fetching for multiple cities.<br>
 ##### 4-day weather forecast.<br>
-##### Detailed current weather information: temperature, humidity, wind speed, visibility, etc.<br>
+##### Detailed current weather information: temperature, humidity, wind speed and visibility, etc.<br>
 ##### Alerts for extreme weather conditions (e.g., rain, thunderstorms).<br>
 ##### Data storage in a SQLite database for further analysis.<br>
 ##### Responsive design using Bootstrap and Weather Icons.<br>
@@ -70,7 +70,7 @@ This project is a real-time weather monitoring dashboard built with Django. It f
 └── manage.py                  # Django management script<br>
 
 ## Key Files
-#### 1. views.py: Contains the logic to fetch data from the OpenWeatherMap API and pass it to the frontend.<br>
+#### 1. views.py: The logic to fetch data from the OpenWeatherMap API and pass it to the front-end.<br>
 #### 2. models.py: Defines the WeatherData model for saving weather data into the SQLite database.<br>
 #### 3. index.html: The main template that renders weather information dynamically using Django’s templating engine.<br>
 
