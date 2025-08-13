@@ -3,13 +3,14 @@ from .models import WeatherData
 import requests
 import datetime
 import math
+import os
 # Create your views here.def index(request):
 def get_dayname(unix_timestamp):#convert unix timestamp to human readable day name
     dt = datetime.datetime.fromtimestamp(unix_timestamp)
     return dt.strftime("%A")
 
 def get_forecast(city): # Function to Get Weather Forecast
-    url = f"https://api.openweathermap.org/data/2.5/forecast/daily?APPID=9b4bbf30228eb8528d36e79d05da1fac&q={city}&units=metric&cnt=5"
+    url = f"https://api.openweathermap.org/data/2.5/forecast/daily?APPID={os.environ.get("API_FORECAST")}&q={city}&units=metric&cnt=5"
     response = requests.get(url)
     data = response.json()
     forecast_data = {}
@@ -40,7 +41,7 @@ def AckAlert(WeatherCond):
     else:
         return False
 def index(request):
-    api_key = "5d6340fd102e2b7ff8556f85530790e7"
+    api_key = os.environ.get("API_KEY")
     cities = ["Delhi", "Mumbai", "Chennai", "Bangalore", "Kolkata", "Hyderabad"]
     now = datetime.datetime.now()
     formatted_date = now.strftime("%Y-%m-%d")
@@ -92,4 +93,5 @@ def index(request):
             weather__data.save()
     except KeyError:
         return render(request,'index.html',{"ErrFlag":True,"ErrVal":{"main":"CityNotFound:invalid city name","Fcast":get_forecast(city)}})
+
     return render(request,'index.html',{"weatherdata":weatherdata})
